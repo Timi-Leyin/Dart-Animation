@@ -1,0 +1,311 @@
+.big-big {
+    position: fixed;
+    font-size: 50rem;
+    left: 50%;
+    opacity: 0.0765;
+    z-index: -1;
+    text-shadow: 0 0 4px transparent;
+    user-select: none;
+    filter: blur(10px);
+    -webkit-text-fill-color: #aaa;
+    background-clip: text;
+    color: transparent;
+    transition: 0.9s;
+    -webkit-text-stroke-width: 4px;
+    transform: rotateY(200deg) translateX(-50%) translateZ(-100px);
+    -webkit-text-stroke-color: #fff;
+    animation: blur 5s linear forwards;
+    transition: 5s;
+}
+
+@keyframes blur {
+
+    0%,
+    50% {
+        filter: blur(500px);
+    }
+
+    100% {
+        filter: blur(10px);
+        transform: rotateY(10deg) translateX(-50%) translateZ(-100px);
+
+    }
+}
+
+.animation-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    transform: perspective(1000px);
+    transform-style: preserve-3d;
+}
+
+.un-named {
+    position: absolute;
+    bottom: -22px;
+    left: 370px;
+    height: 50px;
+    width: 50px;
+    z-index: -1;
+    opacity: 0;
+    background-color: #1B3D56;
+    animation: fades 1.8s forwards;
+    animation-delay: 2s;
+}
+
+.box-with-text {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    min-height: 160px;
+    width: 220px;
+    background: #32A4C6;
+    z-index: 10;
+    box-shadow:
+        0 0 5px rgba(255, 255, 255, 0.267);
+    opacity: 0;
+    transform-origin: right;
+    animation: slide-right 2s forwards;
+}
+
+.txt-inside-box {
+    padding: 10px;
+    opacity: 0.1;
+    font-size: 10px;
+    animation: opaque-2 1.6s forwards;
+    animation-delay: 0.9s;
+
+}
+
+@keyframes slide-right {
+    0% {
+        transform: rotate3d(0, 0, 0, 0deg) translate3d(0, 0, 0);
+        opacity: 0;
+    }
+
+    75% {}
+
+    100% {
+        transform: rotate3d(0, -100, 1, 360deg) translate3d(10%, 0, 200px);
+        opacity: 1;
+    }
+
+}
+
+.main-text {
+    position: relative;
+    transform: translateX(-30px);
+    opacity: 0;
+    animation: opaque 1.6s forwards;
+    animation-delay: 0.9s;
+}
+
+@keyframes opaque {
+    from {}
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+@keyframes opaque-2 {
+    from {}
+
+    to {
+        opacity: 0.6;
+    }
+}
+
+
+
+
+.main-text>h1 {
+    font-size: 39px;
+    letter-spacing: 2px;
+}
+
+.txt-small {
+    font-size: 14px;
+}
+
+
+.phone {
+    position: relative;
+    height: 340px;
+    width: 180px;
+    border-radius: 12px;
+    border: 2px solid rgba(230, 227, 227, 0.61);
+    animation: fades 0.8s linear forwards;
+    opacity: 0;
+    animation-delay: 0.4s;
+}
+
+@keyframes fades {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.phone-inner-border {
+    position: absolute;
+    top: 5px;
+    border-radius: 10px;
+    left: 6px;
+    right: 6px;
+    bottom: 0px;
+    height: 0;
+    background: #285E8A;
+    animation: big-screen-cover 1.6s forwards;
+    animation-delay: 1s;
+
+}
+
+.screen-big {
+    position: absolute;
+    top: 20px;
+    left: 7px;
+    right: 7px;
+    background: linear-gradient(-30deg, rgba(255, 255, 255, 0.267), #308DB9);
+    animation: big-screen 0.8s forwards;
+    animation-delay: 1.5s;
+
+}
+
+
+.screen-l {
+    position: absolute;
+    top: 130px;
+    left: 7px;
+    width: 00%;
+    height: 16px;
+    margin: 10px 0;
+    background: #1D4A69;
+    animation: screen-l 1.6s forwards;
+    animation-delay: 1.5s;
+}
+
+.screen-l:nth-child(2) {
+    top: 150px;
+    animation: screen-l2 1.6s forwards;
+    animation-delay: 1.6s;
+
+}
+
+
+.screen-s {
+    position: absolute;
+    top: 190px;
+    left: 7px;
+    height: 10px;
+    width: 0;
+    margin: 10px 0;
+    background: #1A4763;
+    animation: screen-l 1.9s forwards;
+    animation-delay: 1.9s;
+}
+
+.s2 {
+    top: 205px;
+    width: 0%;
+    animation: screen-l3 1.6s forwards;
+    animation-delay: 2s;
+}
+
+.s3 {
+    top: 220px;
+    width: 0%;
+    animation: screen-l4 1.6s forwards;
+    animation-delay: 2.1s;
+}
+
+.s4 {
+    top: 235px;
+    width: 0%;
+    animation: screen-l2 1.6s forwards;
+    animation-delay: 2.3s;
+}
+
+.s5 {
+    top: 250px;
+    width: 0%;
+    animation: screen-l4 1.6s forwards;
+    animation-delay: 2.4s;
+}
+
+.screen-bottom {
+    position: absolute;
+    top: 290px;
+    height: 30px;
+    left: 7px;
+    width: 0%;
+    background: #3c6d8b;
+    animation: screen-b 1.6s forwards;
+    animation-delay: 2.5s;
+}
+
+@keyframes big-screen {
+    from {
+        height: 0
+    }
+
+    to {
+        height: 100px;
+    }
+}
+
+@keyframes big-screen-cover {
+    from {}
+
+    to {
+        height: 97%;
+    }
+}
+
+@keyframes screen-l {
+    from {}
+
+    to {
+        width: 80%;
+    }
+}
+
+@keyframes screen-l2 {
+    from {}
+
+    to {
+        width: 70%;
+
+    }
+}
+
+@keyframes screen-l3 {
+    from {}
+
+    to {
+        width: 88%;
+
+    }
+}
+
+@keyframes screen-l4 {
+    from {}
+
+    to {
+        width: 86%;
+
+    }
+}
+
+@keyframes screen-b {
+    from {}
+
+    to {
+        width: 60%;
+
+    }
+}
